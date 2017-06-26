@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/template" id="interest-template">
+    <li class="item-content">
+        <div class="item-inner">
+            <div class="row" style="display: block; width: 100%; text-align: center;">
+                <div class="col-25"><span style="font-size: .6rem;">第{0}天</span></div>
+                <div class="col-25"><span style="font-size: .6rem;">{1}万</span></div>
+                <div class="col-25"><span style="font-size: .6rem;">{2}</span></div>
+                <div class="col-25" style=" text-align: right;"><span style="font-size: .6rem; color: #ff7600;">{3}</span><span style="font-size: .6rem;">元</span></div>
+            </div>
+        </div>
+    </li>
+</script>
+<script>
+    if (!String.format) {
+        String.format = function(format) {
+            var args = Array.prototype.slice.call(arguments, 1);
+            return format.replace(/{(\d+)}/g, function(match, number) {
+                return typeof args[number] != 'undefined' ? args[number]
+                        : match;
+            });
+        };
+    }
+    var template = $('#interest-template').html();
+    var html = String.format(template, "1-2", 100, 0.01 , 1000);
+    alert(html);
+</script>
+</body>
+</html>

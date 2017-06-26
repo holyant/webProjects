@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jQuery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<button class="btn btn-primary btn-check" data-loading-text="提交中...">添加成员</button>
+<script>
+    $(document).ready(function(){
+        txt="a"   // String
+        var sa = txt.split(",");   // 使用逗号分隔
+        console.log(sa);
+
+    })
+    $(".btn-check").click(function () {
+        $(this).button('loading');//禁用按钮并显示提交中
+        $(this).button('reset');//重置按钮
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="Utils.js"></script>
+    <script type="text/javascript">
+        var my_array = new Array();
+        for (i = 0; i < 10; i++) {
+            my_array[i] = i;
+        }
+        x = my_array[4];
+        //array的构造函数参数可是是数字,也可以是数组的值
+        var my_array2 = new Array('x','y');
+        my_array2[1] = 'z';
+        //alert(my_array2[1])
+        //alert(new Array(2)[1])
+
+        //一个数组里可以有float对象和int对象吗
+        var i = 10;
+        var d = 2.7;
+        var floatIntArray = new Array();
+        floatIntArray[0] = i;
+        floatIntArray[1] = d;
+        printArray(floatIntArray);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

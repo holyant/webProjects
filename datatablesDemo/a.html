@@ -1,0 +1,21 @@
+<script type="javascript/text">
+function transferProviderPage(id,goodsWay,demandMember,money,certificates,goodsStatus){
+	var strHtml = '';
+	var img = new Image();
+	img.src = certificates;
+	var width = img.width;
+	var height = img.height;
+	if('已付' == goodsStatus){
+		status = '已付清';
+	}
+	var status = goodsStatus;
+	strHtml += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button><h4 class="modal-title">收款信息</h4></div>';
+	strHtml += '<div class="modal-body" ><div id="transferProviderBodyImage"></div><div id="certificateCommentDiv" style="margin-top:20px;padding-top:10px;border-top:1px solid #000;font-weight:bold;"><label>付款方 :</label> '+demandMember+'</span>&nbsp;&nbsp;&nbsp;<label>付款金额('+goodsWay+'):</label>'+money+'&nbsp;&nbsp;&nbsp;<label>付款状态：'+status+'</label>&nbsp;&nbsp;&nbsp;<label>请查收</label></div></div>';
+	var $pic = $(img).css("width",width).css("height",height);
+	strHtml += '<div class="modal-footer"><button type="button" class="btn btn-primary" onclick="transferProvider(\''+id+'\')">确认</button><button type="button" class="btn btn-white" data-dismiss="modal">关闭</button></div>';
+	$("#transferProviderImage").html(strHtml);
+	$("#transferProviderBodyImage").html($pic);
+	$("#transferProviderImageModal").modal("show");
+
+}
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="DateFormater.js"></script>
+    <script>
+        var time1 = new Date().format("yyyy-MM-dd HH:mm:ss");
+        var time2 = new Date(2006/01/12).format("yyyy-MM-dd");
+        var t = "2006/01/12";
+        alert(new Date(t.replace(/-/g,"/")));
+        alert(new Date("2006/01/12 13:14:15"));
+        //alert(time2)
+
+        var s = "2010-09-11";
+        var s1 = "2010-09-12";
+        var d = new Date(s.replace(/-/g,"/"));
+        var d1 = new Date(s1.replace(/-/g,"/"));
+        var m = (d1.getTime()-d.getTime())/(1000*60*60);
+        //alert(m); //24
+        //alert(d);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        console.log(" hello    ".trim() + "123");
+        console.log(" hello    ".toUpperCase());
+        var s1 = "我家住在杭州滨江";
+
+        console.log("substr(start[,length]):")
+        console.log(s1.substr(0, 3));
+        console.log("substring(start[,end]) 包含起始位，不包含结束位");
+        console.log(s1.substring(1, 4));
+
+        console.log("返回一个字符在另一个字符中第一次出现的位置,如果没有出现，则返回-1");
+        console.log(s1.indexOf("家"));
+        console.log(s1.lastIndexOf("家"));
+
+        console.log(MatchDemo());
+        console.log(SearchDemo());
+        console.log(SplitDemo());
+        console.log(joinDemo());
+
+        function MatchDemo() {
+            var r, re;
+            //返回匹配指定正则表达式的字符串,返回的结果是一个数组
+            var s = "The quick brown fox jumped over the lazy yellow dog.";
+            re = /fox/i;
+            r = s.match(re);
+            return (r);
+        }
+
+        function SearchDemo() {
+            var r, re;
+            //返回按照正则表达式检索到的字符串位置
+            var s = "The quick brown fox jumped over the lazy yellow dog.";
+            re = /fox/i;
+            r = s.search(re);
+            return (r);
+        }
+
+        function SplitDemo() {
+            var s, ss;
+            var s = "The quick brown fox jumped over the lazy yellow dog.";
+            // 在每个空格字符处进行分解。
+            ss = s.split(" ");
+            return (ss);
+        }
+
+        //将数组成员使用分隔符连接成字符串
+        function joinDemo(){
+            var a = new Array("1","2","3","4");
+            return a.join(",");
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

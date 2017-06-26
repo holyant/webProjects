@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //保留4位小数
+        var aa = 12.1234000
+        console.log(Number(aa.toFixed(4)));
+        //判断有几位小数
+        var n = 3.143423423;
+        console.log(n.toString().split(".")[1].length);
+        //金额数字格式化123,456.12
+        var data = 123456.12
+        console.log(data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+        //判断是否为数字 isNaN(val)
+        //转换为数字 parseInt(value)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
